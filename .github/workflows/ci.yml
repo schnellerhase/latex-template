@@ -1,0 +1,12 @@
+name: CI
+run-name: ${{ github.actor }} is executing the CI
+on: [push]
+jobs:
+  MakeFile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Run Makefile
+        run: |
+          make
