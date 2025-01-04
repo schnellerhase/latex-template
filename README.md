@@ -32,7 +32,7 @@ open in [VSCode](https://github.com/microsoft/vscode) (or if you must the editor
 code latex-template
 ```
 you should pre prompted for the dev container press `Reopen in Container`.
-(If no prompt is shown press <kdb>CTRL</kdb> + <kdb>SHIFT</kdb> + <kdb>P</kdb>, select `DevContainers: Reopen in Container`.)
+(If no prompt is shown press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, select `DevContainers: Reopen in Container`.)
 `latex-workshop` is installed by default and is configured for `latexmk` only.
 
 If you decide to use another code editor or want to compile only use 
