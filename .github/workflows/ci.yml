@@ -2,6 +2,14 @@ name: CI
 run-name: ${{ github.actor }} is executing the CI
 on: [push]
 jobs:
+  latexmk:
+    runs-on: texlive/texlive
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Compile
+        run: latexmk -lualatex main.tex
+
   MakeFile:
     runs-on: ubuntu-latest
     steps:
