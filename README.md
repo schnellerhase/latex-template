@@ -3,46 +3,71 @@
 </h1>
 
 ## Another LaTeX-Template?
-This repo aims to reduce productivity when working with LaTeX projects.
-As specially for faster initial setup and reduced collaboration problems.
 
-For this a few categorical decisions are enforced by this repo (and should be adopted).
+This repo aims to improve productivity when working with LaTeX projects.
+Especially for faster initial setup and reduced collaboration problems.
 
-It does not enforce any style related question on your `LaTeX` project.
-Including type of project (article, report, beamer), used packages and formatting 
+For this a few categorical decisions are enforced by this template.
+However, no `LaTeX` style is enforced on your project only the technical aspects of editor, compiler and tooling.
 
-How often have you seen this message after a pull or download of a template?
-``` 
+## Why another LaTeX template?
+
+How often have you seen messages such as
+
+```
 LaTeX Error: File *.sty not found.
 ```
-The LaTeX code is compiled (and edited) in a Docker container, by default [texlive/texlive](https://hub.docker.com/r/texlive/texlive).
+
+after a template download?
+Witnessed how the compile time on overleaf got out of hand and you needed to switch to a standalone solution?
+Or faced a tedious resetup after a switching to a new mashine?
+
+## Choices of this template
+
+> On my setup it compiles...
+
+The LaTeX code is compiled (and edited) in a **Docker container**, by default [texlive/texlive](https://hub.docker.com/r/texlive/texlive).
 This should eliminate any installation or missing package problems, or at least requires a non-local, i.e. repo based, fix of such.
 
-Did you compile with `pdflatex ➞ bibtex ➞ pdflatex x 2` or `lualatex`?
-The compiler of choice is `LuaTex` controlled by `latexmk`.
+> Did you compile with `pdflatex ➞ bibtex ➞ pdflatex x 2` or `lualatex`?
+
+The **compiler** of choice is `LuaTex` controlled by `latexmk`.
 No more wrong recipes or different library backends between collaborators, hopefully eliminating compilation differences and problems further.
 
+> When did this stop to work?
+
+**Continuous Integration** is performed through Github actions.
+This eliminates breaking changes from going unnoticed.
+
 ## How To Use
-Clone this repo
+
+Clone this repo (or use the Github template functionality)
+
 ```
 git clone git@github.com:schnellerhase/latex-template.git
 ```
-open in [VSCode](https://github.com/microsoft/vscode) (or if you must the editor of your choice)
+
+open in [VSCode](https://github.com/microsoft/vscode)
+
 ```
 code latex-template
 ```
+
 you should pre prompted for the dev container press `Reopen in Container`.
 (If no prompt is shown press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, select `DevContainers: Reopen in Container`.)
 `latex-workshop` is installed by default and is configured for `latexmk` only.
 
-If you decide to use another code editor or want to compile only use 
+If you decide to use another code editor or want to compile only use
+
 ```
 make
 ```
-which triggers the execution in the same container as well.
 
-Remove any for you unecessary contents, check the CI directory `.github/` and `.devcontainer/` and `.vscode/` if VSCode is not used.
+which triggers the compilation in the same container with the same compiler settings.
 
-Happy Texing.
+Optionally, remove any for you unecessary directories and files.
+Especially check if you need the directories `.github/` and `.devcontainer/` and `.vscode/`.
+
+Happy TeXing.
 
 ---
