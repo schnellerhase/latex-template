@@ -56,14 +56,7 @@ code latex-template
 you should pre prompted for the dev container press `Reopen in Container`.
 (If no prompt is shown press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, select `DevContainers: Reopen in Container`.)
 `latex-workshop` is installed by default and is configured for `latexmk` only.
-
-If you decide to use another code editor or want to compile only use
-
-```
-make
-```
-
-which triggers the compilation in the same container with the same compiler settings.
+Also `tex-fmt` is configured for the formatting of the LaTeX code.
 
 Optionally, remove any for you unecessary directories and files.
 Especially check if you need the directories `.github/` and `.devcontainer/` and `.vscode/`.
