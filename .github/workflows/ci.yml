@@ -11,3 +11,5 @@ jobs:
         run: docker build -t latex-template .devcontainer/
       - name: Compile
         run: docker run -i -v ${PWD}:/tmp -w /tmp latex-template latexmk -lualatex main.tex
+      - name: Formatting
+        run: docker run -i -v ${PWD}:/tmp -w /tmp latex-template tex-fmt -c main.tex
