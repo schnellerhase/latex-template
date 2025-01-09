@@ -6,7 +6,10 @@
     "vscode": {
       "extensions": [
         "james-yu.latex-workshop"
-      ]
+      ],
+      "settings": {
+        "latex-workshop.formatting.latex": "tex-fmt"
+      }
     }
   }
 }
