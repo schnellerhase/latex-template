@@ -1,5 +1,7 @@
 {
-  "image": "texlive/texlive",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
